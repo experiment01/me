@@ -1,0 +1,151 @@
+@font-face {
+    font-family: px-square;
+    src: url(assets/fonts/Pixel\ Square.ttf);
+}
+
+@font-face {
+    font-family: whitney-bold;
+    src: url(assets/fonts/whitneybold.otf);
+}
+
+@font-face {
+    font-family: whitney-med;
+    src: url(assets/fonts/whitneymedium.otf);
+}
+
+@font-face {
+    font-family: italipixel;
+    src: url(assets/fonts/Italipixel.ttf)
+}
+
+@keyframes headerAnimation {
+    from {bottom: 200px;}
+    to {bottom: 0px;}
+}
+
+html {
+    background-color: rgb(20, 20, 25);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+#discordProfile {
+    flex-direction: row;
+    text-align: left;
+    line-height: 0px;
+    padding: 5px;
+    height: 41px;
+    background-color: rgb(29, 31, 37);
+    border-radius: 5px 5px 5px 5px
+}
+
+#discordText {
+    display: inline-block;
+    offset-position: top;
+    position: relative;
+    bottom: 5px;
+}
+
+#discordName {
+    font-family: whitney-bold;
+}
+
+#discordID {
+    font-family: whitney-med;
+    color: rgb(181, 187, 190);
+    font-size: 13px;
+}
+
+#discordPFP {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+#header {
+    text-align: center;
+    background-color: rgb(30, 30, 35);
+    box-shadow: 0px 0px 15px black;
+    border-radius: 0px 0px 15px 15px;
+    width: 650px;
+    height: 135px;
+    margin: auto;
+    line-height: 50px;
+    animation-name: headerAnimation;
+    animation-duration: 1.25s;
+    position: relative;
+}
+
+#name {
+    font-family: px-square;
+    letter-spacing: -5px;
+    font-size: 100px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    color: rgb(245, 245, 255);
+    letter-spacing: -5px;
+    padding-top: 33px;
+}
+
+#description {
+    font-family: italipixel;
+    text-align: right;
+    color: rgb(175, 175, 180);
+    padding-right: 43px;
+    font-size: 30px;
+}
+
+#discordDropdown {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(41, 43, 52);
+    color: rgb(245, 245, 255);
+    width: 150px;
+    height: 51px;
+    margin-left: 475px;
+    padding: 5px;
+    padding-top: 10px;
+    border-radius: 0px 0px 0px 10px;
+    position: relative;
+    bottom: 66px;
+    transition: 0.75s;
+    z-index: -1;
+}
+
+#discordDropdown:hover {
+    bottom: -2px;
+}
+
+#discordArrow {
+    flex-direction: row-reverse;
+    width: auto;
+}
+
+#discordArrow div {
+    background-color: rgb(41, 43, 52);
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: right;
+    padding-left: 3px;
+    position: relative;
+    left: 5px;
+}
+
+#copyImage {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    right: 12px;
+    top: 20px;
+    cursor: pointer;
+}
