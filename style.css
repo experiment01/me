@@ -1,0 +1,355 @@
+@font-face {
+    font-family: px-square;
+    src: url(assets/fonts/Pixel\ Square.ttf);
+}
+
+@font-face {
+    font-family: px-square-bold;
+    src: url(assets/fonts/Pixel\ Square\ Bold.ttf);
+}
+
+@font-face {
+    font-family: whitney-bold;
+    src: url(assets/fonts/whitneybold.otf);
+}
+
+@font-face {
+    font-family: whitney-med;
+    src: url(assets/fonts/whitneymedium.otf);
+}
+
+@font-face {
+    font-family: italipixel;
+    src: url(assets/fonts/Italipixel.ttf)
+}
+
+@keyframes headerAnimation {
+    from {top: -200px;}
+    to {top: 0px;}
+}
+
+@keyframes subheaderAnimation {
+    from {top: -125px;}
+    to {top: 75px;}
+}
+
+@keyframes footerAnimation {
+    from {bottom: -50px;}
+    to {bottom: 0px;}
+}
+
+
+/*
+
+--- PROPERTIES TEMPLATE ---
+[1] Position
+[2] Size
+[3] Text
+[4] Colors
+[5] Shadows
+[6] Animation
+[7] Padding
+[8] Margins
+[9] Layering (z-index)
+---------------------------
+
+*/
+
+
+.flex {
+    display: flex;
+}
+
+.disable-select {
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+
+.centered {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+html {
+    background-color: rgb(20, 20, 25);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* beginning of scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgb(41, 43, 52);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* end of scrollbar */
+
+
+
+/* beginning of header */
+
+#header {
+    position: fixed;
+    width: 700px;
+    height: 135px;
+    border-radius: 0px 0px 15px 15px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(30, 30, 35);
+    box-shadow: 0px 0px 15px black;
+    animation-name: headerAnimation;
+    animation-duration: 1.25s;
+    z-index: 0;
+}
+
+#header-name {
+    position: relative;
+    font-size: 100px;
+    font-family: px-square;
+    letter-spacing: -5px;
+    color: rgb(245, 245, 255);
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    padding-top: 33px;
+}
+
+#header-description {
+    position: relative;
+    font-size: 24px;
+    font-family: italipixel;
+    text-align: right;
+    color: rgb(175, 175, 180);
+    padding-right: 70px;
+}
+
+/* end of header*/
+
+/* beginning of subheader */
+
+#subheader {
+    position: fixed;
+    top: 75px;
+    width: 660px;
+    height: 100px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    animation-name: subheaderAnimation;
+    animation-duration: 1.25s;
+    z-index: -1;
+}
+
+#subheader-navigator {
+    position: relative;
+}
+
+.navigator-tab {
+    position: relative;
+    left: -5px;
+    top: 56px;
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 17px;
+    text-align: center;
+    font-family: px-square;
+    color: white;
+    background-color: rgb(41, 43, 52);
+    transition: 0.25s;
+    padding-left: 12px;
+    padding-right: 8px;
+    padding-top: 5px;
+    margin-left: 5px;
+}
+
+.navigator-tab:hover {
+    top: 60px;
+    color: rgb(41, 43, 52);
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+#subheader-dropdown {
+    position: relative;
+    top: -6px;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 150px;
+    height: 51px;
+    border-radius: 0px 0px 0px 10px;
+    color: rgb(245, 245, 255);
+    background-color: rgb(41, 43, 52);
+    transition: 0.75s;
+    padding: 5px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+#subheader-dropdown:hover {
+    top: 60px;
+}
+
+#subheader-dropdown:hover #subheader-dropdown-tab-arrow {
+    top: 18px;
+    transform: rotate(180deg);
+}
+
+#subheader-dropdown-tab {
+    flex-direction: row-reverse;
+    width: auto;
+}
+
+#subheader-dropdown-tab div {
+    background-color: rgb(41, 43, 52);
+    font-size: 20px;
+    width: 45px;
+    height: 40px;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: right;
+    flex-direction: row;
+    padding-left: 3px;
+    position: relative;
+    left: 5px;
+    display: flex;
+}
+
+#subheader-dropdown-profile {
+    flex-direction: row;
+    text-align: left;
+    line-height: 0px;
+    padding: 5px;
+    height: 39px;
+    background-color: rgb(29, 31, 37);
+    border-radius: 5px 5px 5px 5px
+}
+
+#subheader-dropdown-profile-picture {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+#subheader-dropdown-profile-text {
+    display: inline-block;
+    offset-position: top;
+    position: relative;
+    bottom: 5px;
+}
+
+#subheader-dropdown-profile-text-name {
+    font-family: whitney-bold;
+}
+
+#subheader-dropdown-profile-text-id {
+    font-family: whitney-med;
+    color: rgb(181, 187, 190);
+    font-size: 13px;
+}
+
+#subheader-dropdown-profile-copy {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    right: 12px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#subheader-dropdown-tab-image {
+    position: relative;
+    width: 25px;
+    height: 18px;
+    top: 16px;
+    right: 5px;
+}
+
+#subheader-dropdown-tab-arrow {
+    position: relative;
+    right: 3px;
+    bottom: 8px;
+}
+
+/* end of subheader */
+
+
+
+/* beginning of content */
+
+#content {
+    position: absolute;
+    font-family: Helvetica;
+    color: rgb(154, 154, 187);
+    overflow-y: auto;
+    width: 700px;
+    margin-top: 160px;
+    z-index: -2;
+}
+
+/* end of content */
+
+
+
+/* beginning of footer */
+
+#footer {
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 35);
+    box-shadow: 0px 0px 15px black;
+    border-radius: 15px 15px 0px 0px;
+    width: 700px;
+    height: 35px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    animation-name: footerAnimation;
+    animation-duration: 1.25s;
+}
+
+#footer-signature {
+    padding-left: 15px;
+    color: rgb(175, 175, 180);
+    font-family: px-square;
+}
+
+#footer-version {
+    padding-right: 15px;
+    color: rgb(175, 175, 180);
+    font-family: px-square;
+}
+
+#footer hr {
+    color: rgb(175, 175, 180);
+    width: 46%;
+    border-top: dashed 1px;
+    border-bottom: dashed 1px;
+}
+
+/* end of footer */

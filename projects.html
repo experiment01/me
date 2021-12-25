@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+
+<script src="assets/scripts/functions.js"></script>
+
+<body>
+    <div id="header" class="centered disable-select">
+        <div id="header-name">
+            experiment
+        </div>
+
+        <div id="header-description">
+            AMATEUR VIDEO EDITOR
+        </div>
+
+        <script src="assets/scripts/header-logic.js"></script>
+    </div>
+
+    <div id="subheader" class="centered disable-select flex">
+        <div id="subheader-dropdown" class="flex" style="z-index: -1;">
+            <div id="subheader-dropdown-profile" class="flex">
+                <img id="subheader-dropdown-profile-picture" src="assets/images/discord_profile.png">
+                
+                <div id="subheader-dropdown-profile-text">
+                    <p id="subheader-dropdown-profile-text-name">_experiment</p>
+                    <p id="subheader-dropdown-profile-text-id">#1956</p>
+                </div>
+
+                <img id="subheader-dropdown-profile-copy" src="assets/images/copy.png" onclick="copy()">
+            </div>
+
+            <div id="subheader-dropdown-tab" class="flex">
+                <div>
+                    <img id="subheader-dropdown-tab-image" src="assets/images/discord_logo_white.png">
+                    <p id="subheader-dropdown-tab-arrow">￬</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="subheader-navigator" class="flex">
+            <a href="about.html" style="text-decoration: none;">
+                <div id="subheader-navigator-tab-about" class="navigator-tab">
+                    About
+                </div>
+            </a>
+            <a href="projects.html" style="text-decoration: none;">
+                <div id="subheader-navigator-tab-projects" class="navigator-tab">
+                    Projects
+                </div>
+
+                <style>
+                    #subheader-navigator-tab-projects {
+                        background-color: rgb(55, 57, 70);
+                    }
+                    #subheader-navigator-tab-projects:hover {
+                        background-color: white;
+                        }
+                </style>
+            </a> 
+        </div>
+    </div>
+
+    <div id="content" class="centered">
+        <p>
+            Coming soon :)
+        </p>
+    </div>
+
+    <div id="footer" class="centered flex">
+        <b id="footer-signature">Created by experiment</b>
+        <hr>
+        <p id="footer-version">0.2.0 <span style="font-size: 10px">Dec 2021</span></p>
+    </div>
+
+</body>
+
+</html>
