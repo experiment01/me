@@ -23,9 +23,20 @@
     src: url(assets/fonts/Italipixel.ttf)
 }
 
+@font-face {
+    font-family: minecraft;
+    src: url(assets/fonts/Minecraft.ttf);
+}
+
 @keyframes headerAnimation {
     from {top: -200px;}
     to {top: 0px;}
+}
+
+@keyframes nameAnimation {
+    0% {text-shadow: 0px 0px 5px rgb(255, 255, 255);}
+    50% {text-shadow: 0px 0px 10px rgb(255, 255, 255);}
+    100% {text-shadow: 0px 0px 5px rgb(255, 255, 255);}
 }
 
 @keyframes subheaderAnimation {
@@ -33,11 +44,41 @@
     to {top: 75px;}
 }
 
+@keyframes contentAnimation {
+    from {color: transparent; background-color: transparent;}
+    to {color: rgba(154, 154, 187, 1);}
+}
+
 @keyframes footerAnimation {
     from {bottom: -50px;}
     to {bottom: 0px;}
 }
 
+@keyframes rotateNeg90 {
+    0%  {transform: rotate(0deg); top: 10px;}
+    100% {transform: rotate(-90deg); top: 10px;}
+}
+
+@keyframes height500 {
+    100% {height: 500px;}
+}
+
+@keyframes rotate0 {
+    0% {transform: rotate(-90deg); top: 10px;}
+    100% {transform: rotate(0deg); top: 10px; right: 11px;}
+}
+
+@keyframes height100 {
+    100% {height: 100px;}
+}
+
+@keyframes opacity100 {
+    50% {color: rgba(255, 255, 255, 1); text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);}
+}
+
+@keyframes opacity0 {
+    50% {color: rgba(0, 0, 0, 0); text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);}
+}
 
 /*
 
@@ -73,7 +114,13 @@
     transform: translate(-50%);
 }
 
+.shadow-text {
+    text-shadow: 1px 1px 3px black;
+}
 
+.shadow-box {
+    box-shadow: 1px 1px 3px black;
+}
 
 html {
     background-color: rgb(20, 20, 25);
@@ -82,6 +129,11 @@ html {
 body {
     padding: 0;
     margin: 0;
+}
+
+h1 {
+    font-family: px-square;
+    margin-bottom: 0px;
 }
 
 /* beginning of scrollbar */
@@ -119,7 +171,7 @@ body {
     background-color: rgb(30, 30, 35);
     box-shadow: 0px 0px 15px black;
     animation-name: headerAnimation;
-    animation-duration: 1.25s;
+    animation-duration: 0.75s;
     z-index: 0;
 }
 
@@ -130,6 +182,7 @@ body {
     letter-spacing: -5px;
     color: rgb(245, 245, 255);
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    animation: nameAnimation 10s infinite ease-in-out;
     padding-top: 33px;
 }
 
@@ -153,8 +206,7 @@ body {
     height: 100px;
     justify-content: space-between;
     flex-direction: row-reverse;
-    animation-name: subheaderAnimation;
-    animation-duration: 1.25s;
+    animation: subheaderAnimation 0.75s;
     z-index: -1;
 }
 
@@ -304,9 +356,83 @@ body {
     font-family: Helvetica;
     color: rgb(154, 154, 187);
     overflow-y: auto;
-    width: 700px;
+    width: 675px;
     margin-top: 160px;
+    padding-bottom: 100px;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
     z-index: -2;
+}
+
+#content hr {
+    border-color: rgb(154, 154, 187);
+}
+
+.infobox {
+    width: 675px;
+    height: 100px;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(30, 30, 35);
+}
+
+#content-infobox-cloaks-banner-arrow {
+    cursor: pointer;
+}
+
+#content-infobox-cloaks-banner-arrow-image {
+    position: relative;
+    right: 5px;
+    bottom: 15px;
+    transform: rotate(-90deg) translateX(-50%) translateY(-10%);
+    width: 50px;
+}
+
+#content-infobox-cloaks {
+    background-image: linear-gradient(rgb(72, 166, 222), rgb(64, 109, 214));
+    transition: box-shadow 0.5s;
+}
+
+#content-infobox-cloaks:hover {
+    box-shadow: 0px 0px 10px rgb(72, 166, 222);
+}
+
+#content-infobox-cloaks-banner {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#content-infobox-cloaks-banner-text {
+    flex-direction: column;
+    line-height: 50px;
+    color: white;
+}
+
+#content-infobox-cloaks-banner-text-title {
+    position: relative;
+    left: 15px;
+    top: 15px;
+    font-family: minecraft;
+    font-size: 50px;
+    margin: 0px;
+}
+
+#content-infobox-cloaks-banner-text-description {
+    position: relative;
+    margin-bottom: 0px;
+    bottom: 15px;
+    left: 15px;
+}
+
+#content-infobox-cloaks-summary {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* end of content */
@@ -329,8 +455,7 @@ body {
     left: 50%;
     transform: translate(-50%);
     margin: 0 auto;
-    animation-name: footerAnimation;
-    animation-duration: 1.25s;
+    animation: footerAnimation 0.75s;
 }
 
 #footer-signature {
@@ -347,7 +472,7 @@ body {
 
 #footer hr {
     color: rgb(175, 175, 180);
-    width: 46%;
+    width: 40%;
     border-top: dashed 1px;
     border-bottom: dashed 1px;
 }

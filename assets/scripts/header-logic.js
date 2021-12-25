@@ -6,12 +6,11 @@ var splitString = []
 var intervalID = window.setInterval(textCycle, interval * array.length);
 
 function textCycle() {
-  console.log("test")
-    array.forEach(function (item, index) {
-      setTimeout(function() {
-        description.innerHTML = item
-      }, index * interval);
-    });
+  array.forEach(function (item, index) {
+    setTimeout(function() {
+      description.innerHTML = item
+    }, index * interval);
+  });
 }
 
 textCycle()
