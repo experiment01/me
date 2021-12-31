@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +8,27 @@
     <link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
-
 <script src="assets/scripts/functions.js"></script>
-
 <body>
     <div id="header" class="centered disable-select">
         <div id="header-name">
             experiment
         </div>
-
         <div id="header-description">
             AMATEUR VIDEO EDITOR
         </div>
-
         <script src="assets/scripts/header-logic.js"></script>
     </div>
-
     <div id="subheader" class="centered disable-select flex">
         <div id="subheader-dropdown" class="flex" style="z-index: -1;">
             <div id="subheader-dropdown-profile" class="flex">
                 <img id="subheader-dropdown-profile-picture" src="assets/images/discord_profile.png">
-                
                 <div id="subheader-dropdown-profile-text">
                     <p id="subheader-dropdown-profile-text-name">_experiment</p>
                     <p id="subheader-dropdown-profile-text-id">#1956</p>
                 </div>
-
                 <img id="subheader-dropdown-profile-copy" src="assets/images/copy.png" onclick="copy()">
             </div>
-
             <div id="subheader-dropdown-tab" class="flex">
                 <div>
                     <img id="subheader-dropdown-tab-image" src="assets/images/discord_logo_white.png">
@@ -45,18 +36,16 @@
                 </div>
             </div>
         </div>
-
         <div id="subheader-navigator" class="flex">
             <a href="about.html" style="text-decoration: none;">
-                <div id="subheader-navigator-tab-about" class="navigator-tab">
+                <div id="subheader-navigator-tab-about" class="navigator-tab shadow-box">
                     About
                 </div>
             </a>
             <a href="projects.html" style="text-decoration: none;">
-                <div id="subheader-navigator-tab-projects" class="navigator-tab">
+                <div id="subheader-navigator-tab-projects" class="navigator-tab shadow-box">
                     Projects
                 </div>
-
                 <style>
                     #subheader-navigator-tab-projects {
                         background-color: rgb(55, 57, 70);
@@ -68,37 +57,56 @@
             </a> 
         </div>
     </div>
-
     <div id="content" class="centered disable-select">
-        <h1 class="shadow-text">Projects</h1>
-        <hr class="shadow-box">
+        <div class="content-header flex shadow-text">
+            <div class="left-line"></div>
+            <p>Projects</p>
+            <div class="right-line"></div>
+        </div>
         <div id="content-infobox-cloaks" class="infobox shadow-text shadow-box flex">
             <div id="content-infobox-cloaks-banner" class="flex">
                 <div id="content-infobox-cloaks-banner-text">
-                    <h2 id="content-infobox-cloaks-banner-text-title">Cloaks+</h2>
+                    <div class="flex">
+                        <img id="content-infobox-cloaks-banner-text-title-image" src="assets/images/cloaks_logo.png">
+                        <h2 id="content-infobox-cloaks-banner-text-title">Cloaks+</h2>
+                    </div>
                     <p id="content-infobox-cloaks-banner-text-description">Where buying capes is a thing of the past.</p>
                 </div>
-                
                 <div id="content-infobox-cloaks-banner-arrow" onclick="reveal()">
                     <img id="content-infobox-cloaks-banner-arrow-image" src="assets/images/down_arrow.png">
                 </div>
             </div>
-            <p id="content-infobox-cloaks-summary" hidden=true>
-                Cloaks+ is a free and open-source addon to Minecraft that allows you to fully customize your Minecraft character.
-                You can customize and create your own cape, or choose one of the many excellent designs in the catalog.
-                Along with capes, there is also a selection of cosmetics, some of which are completely free to use.
-                <br><br>
-                Cloaks+, where buying capes is a thing of the past.
-            </p>
+            <div id="content-infobox-cloaks-expanded" class="flex">
+                <p id="content-infobox-cloaks-expanded-summary" hidden=true>
+                    Cloaks+ is a free and open-source addon to Minecraft that allows you to fully customize your Minecraft character.
+                    You can customize and create your own cape, or choose one of the many excellent designs in the catalog.
+                    Along with capes, there is also a selection of cosmetics, some of which are completely free to use.
+                    <br><br>
+                    <b>Cloaks+, where buying capes is a thing of the past.</b>
+                    <br>
+                    <i>* Note that I do not own this project, I am simply a contributor.</i>
+                </p>
+                <div id="content-infobox-cloaks-expanded-links" hidden=true>
+                    <a href="https://discord.gg/cloaks" target="_blank">
+                        <div class="linkbutton linkbutton-discord shadow-box">
+                            <img src="assets/images/discord_logo_white.png">
+                            <p>Discord</p>
+                        </div>
+                    </a>
+                    <a href="https://cloaksplus.com" target="_blank">
+                        <div class="linkbutton linkbutton-website shadow-box">
+                            <img src="assets/images/web_icon.png">
+                            <p>Website</p>
+                        </div>
+                    </a>  
+                </div>
+            </div>
         </div>
     </div>
-
     <div id="footer" class="centered flex">
-        <b id="footer-signature">Handcrafted by experiment</b>
+        <b id="footer-signature">Created by experiment</b>
         <hr>
-        <p id="footer-version">0.3.1 <span style="font-size: 10px">Dec 2021</span></p>
+        <p id="footer-version">0.3.3 <span style="font-size: 10px">Dec 2021</span></p>
     </div>
-
 </body>
-
 </html>
